@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+
+<head>
+    {% block head %}{% endblock %}
+    {% block meta %}{% endblock %}
+    {% block stylesheets %}{% endblock %}
+    {% block icon %}<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />{% endblock %}
+
+    <meta charset="UTF-8" />
+
+    <title>
+        {% block title %}
+            118
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+{% block body %}{% endblock %}
+
+<script type="text/javascript">
+    {% block javascripts %}{% endblock %}
+</script>
+</body>
+
+</html>

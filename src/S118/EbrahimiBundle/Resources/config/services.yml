@@ -1,0 +1,12 @@
+parameters:
+#    s118_ebrahimi.example.class: S118\EbrahimiBundle\Example
+
+services:
+    s118_user.registration.form.type:
+        class: S118\EbrahimiBundle\Form\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: s118_user_registration }
+#    s118_ebrahimi.example:
+#        class: %s118_ebrahimi.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

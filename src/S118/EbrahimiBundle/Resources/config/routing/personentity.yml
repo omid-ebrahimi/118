@@ -1,0 +1,34 @@
+person:
+    pattern:  /
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:index" }
+
+person_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:show" }
+
+person_new:
+    pattern:  /new
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:new" }
+
+person_create:
+    pattern:  /create
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:create" }
+    requirements: { _method: post }
+
+person_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:edit" }
+
+person_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:update" }
+    requirements: { _method: post|put }
+
+person_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:delete" }
+    requirements: { _method: post|delete }
+
+person_search:
+    pattern:  /search
+    defaults: { _controller: "S118EbrahimiBundle:PersonEntity:search" }

@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>PersonEntity creation</h1>
+
+    <form action="{{ path('person_create') }}" method="post" {{ form_enctype(form) }}>
+        <div style="text-align: right; direction: rtl;">
+            نام:
+            {{ form_errors(form.fn) }}
+            {{ form_widget(form.fn) }}
+            <br><br>
+            نام خانوادگی:
+            {{ form_errors(form.ln) }}
+            {{ form_widget(form.ln) }}
+            <br><br>
+            شهر:
+            {{ form_errors(form.city) }}
+            {{ form_widget(form.city) }}
+            <br><br>
+            خیابان:
+            {{ form_errors(form.street) }}
+            {{ form_widget(form.street) }}
+            <br><br>
+            کوچه:
+            {{ form_errors(form.alley) }}
+            {{ form_widget(form.alley) }}
+            <br><br>
+            نوع:
+            {{ form_errors(form.type) }}
+            {{ form_widget(form.type) }}
+            <br><br>
+            آپلود عکس:
+            {{ form_errors(form.file) }}
+            {{ form_widget(form.file) }}
+            <p>
+                {{ form_widget(form._token) }}
+                <button type="submit">Create</button>
+            </p>
+        </div>
+
+
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('person') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

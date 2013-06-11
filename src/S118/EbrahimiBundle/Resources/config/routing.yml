@@ -1,0 +1,15 @@
+s118_ebrahimi_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: S118EbrahimiBundle:Default:index }
+
+s118_ebrahimi_goodby:
+    pattern:  /goodby/{family}
+    defaults: { _controller: S118EbrahimiBundle:Default:goodby }
+
+S118EbrahimiBundle_person:
+    resource: "@S118EbrahimiBundle/Resources/config/routing/personentity.yml"
+    prefix:   /person
+
+S118EbrahimiBundle_phone:
+    resource: "@S118EbrahimiBundle/Resources/config/routing/phoneentity.yml"
+    prefix:   /phone
